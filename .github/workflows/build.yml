@@ -39,7 +39,9 @@ jobs:
 
       - name: Get Repository URL
         id: repo_url
-        run: echo "::set-output name=url::https://github.com/${{ github.repository }}"
+        run: echo "::set-output name=url::git://github.com/${{ github.repository }}.git"
+
+        # run: echo "::set-output name=url::https://github.com/${{ github.repository }}"
             
       - name: Send custom JSON data to Slack workflow
         id: slack
@@ -95,7 +97,7 @@ jobs:
                 }
               ]
             }
-            
+
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
