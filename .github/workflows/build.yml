@@ -5,7 +5,7 @@ on:
     - 'v1.0'
     tags:
     - 'latest'
-      paths-ignore:
+    paths-ignore:
     - 'README.md'
 
 jobs:
