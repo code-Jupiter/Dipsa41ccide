@@ -75,67 +75,7 @@ jobs:
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN}}
       
-      - name: Get Repository URL
-        id: repo_url
-        run: echo "::set-output name=url::https://github.com/${{ github.repository }}"
-            
-      - name: Send custom JSON data to Slack workflow
-        id: slack
-        uses: slackapi/slack-github-action@v1.24.0
-        with:
-          payload:  |
-            {
-              "text": "CICD Workshop by Li Jinglin",
-              "blocks": [
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "*Name:*\n Li Jinglin"
-                  }
-                },
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "*Metriculation:*\n A0276822X"
-                  }
-                },
-                {
-                  "type": "section",
-                  "block_id": "section789",
-                  "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Email :*\n 1694572764@qq.com"
-                    }
-                  ]
-                },
-                {
-                  "type": "section",
-                  "block_id": "section790",
-                  "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Repository :*\n ${{steps.repo_url.outputs.url}}"
-                    }
-                  ]
-                },
-                {
-                  "type": "section",
-                  "block_id": "section791",
-                  "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Deployment :*\n ${{ secrets.Deployment}}"
-                    }
-                  ]
-                }
-              ]
-            }
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+
 
         
           
