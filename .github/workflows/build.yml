@@ -5,12 +5,16 @@ on:
     - 'v1.0'
     tags:
     - 'latest'
+      paths-ignore:
+    - 'README.md'
 
 jobs:
   ci:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    build:
+    if: "!contains(github.event.head_commit.message, '#NORUN')"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
