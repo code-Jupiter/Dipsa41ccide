@@ -79,6 +79,13 @@ jobs:
                     "type": "mrkdwn",
                     "text": "*Repository :*\n ${{steps.repo_url.outputs.url}}"
                   }
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*Deployment :*\n ${{ secrets.Deployment}} \n <${{ secrets.Deployment}}|Open Application>"
+                  }
                 }
               ]
             }
