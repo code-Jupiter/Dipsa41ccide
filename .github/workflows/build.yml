@@ -102,17 +102,7 @@ jobs:
                   "fields": [
                     {
                       "type": "mrkdwn",
-                      "text": "*Open Application*"
-                    },
-                    {
-                      "type":"button",
-                      "text":{
-                      "type":"plain_text",
-                      "text": "${{ secrets.Deployment}}",
-                      "emoji": true  
-                      },
-                      "value": "click_me",
-                      "url": "${{ secrets.Deployment}}"
+                      "text": "<a href=\"${{ secrets.Deployment}}\">Open Application</a>"
                     }
                   ]
                 }
