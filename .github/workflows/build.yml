@@ -68,33 +68,24 @@ jobs:
                 },
                 {
                   "type": "section",
-                  "block_id": "section789",
-                  "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Email :*\n 1694572764@qq.com"
-                    }
-                  ]
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*Email :*\n 1694572764@qq.com"
+                  }
                 },
                 {
                   "type": "section",
-                  "block_id": "section790",
-                  "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Repository :*\n ${{steps.repo_url.outputs.url}}"
-                    }
-                  ]
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*Repository :*\n ${{steps.repo_url.outputs.url}}"
+                  }
                 },
                 {
                   "type": "section",
-                  "block_id": "section791",
-                  "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Deployment :*\n ${{ secrets.Deployment}} \n <https://dipsa41ccicd-production-277b.up.railway.app|Open Application>"
-                    }
-                  ]
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*Deployment :*\n ${{ secrets.Deployment}} \n <${{ secrets.Deployment}}|Open Application>"
+                  }
                 }
               ]
             }
