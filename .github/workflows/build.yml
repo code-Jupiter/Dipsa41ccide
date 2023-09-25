@@ -100,10 +100,19 @@ jobs:
                   "type": "section",
                   "block_id": "section792",
                   "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "<a href=\"${{ secrets.Deployment}}\">Open Application</a>"
-                    }
+                  {
+                    "type": "mrkdwn",
+                    "text": "*Open Application*"
+                  },
+                  {
+                    "type": "button",
+                    "text": {
+                    "type": "plain_text", 
+                    "text": "${{ secrets.Deployment}}"
+                    },
+                    "value": "click_me",
+                    "url": "${{ secrets.Deployment}}"
+                  }
                   ]
                 }
               ]
