@@ -92,7 +92,7 @@ jobs:
                   "fields": [
                     {
                       "type": "mrkdwn",
-                      "text": "*Deployment :*\n ${{ secrets.Deployment}} \n <${{ secrets.Deployment}}|Open Application>"
+                      "text": "*Deployment :*\n ${{ secrets.Deployment}} \n <https://dipsa41ccicd-production-277b.up.railway.app|Open Application>"
                     }
                   ]
                 }
