@@ -102,7 +102,7 @@ jobs:
                   "fields": [
                     {
                       "type": "mrkdwn",
-                      "text": "*Deployment :*\n ${{ secrets.Deployment}}"
+                      "text": "*[Open Application](${{ secrets.Deployment}})*"
                     }
                   ]
                 }
