@@ -95,16 +95,6 @@ jobs:
                       "text": "*Deployment :*\n ${{ secrets.Deployment}}"
                     }
                   ]
-                },
-                {
-                  "type": "section",
-                  "block_id": "section792",
-                  "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "<Open Application> ${{ secrets.Deployment}} <\Open Application>"
-                    }
-                  ]
                 }
               ]
             }
