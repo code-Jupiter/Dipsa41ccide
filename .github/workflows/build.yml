@@ -42,9 +42,7 @@ jobs:
 
       - name: Get Repository URL
         id: repo_url
-        run: echo "::set-output name=url::git://github.com/${{ github.repository }}.git"
-
-        # run: echo "::set-output name=url::https://github.com/${{ github.repository }}"
+        run: echo "::set-output name=url::https://github.com/${{ github.repository }}"
             
       - name: Send custom JSON data to Slack workflow
         id: slack
@@ -95,6 +93,16 @@ jobs:
                     {
                       "type": "mrkdwn",
                       "text": "*Deployment :*\n ${{ secrets.Deployment}}"
+                    }
+                  ]
+                }
+                {
+                  "type": "section",
+                  "block_id": "section792",
+                  "fields": [
+                    {
+                      "type": "mrkdwn",
+                      "text": "<Open Application>${{ secrets.Deployment}}</Open Application>"
                     }
                   ]
                 }
