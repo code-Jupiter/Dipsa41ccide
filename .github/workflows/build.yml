@@ -92,27 +92,8 @@ jobs:
                   "fields": [
                     {
                       "type": "mrkdwn",
-                      "text": "*Deployment :*\n ${{ secrets.Deployment}}"
+                      "text": "*Deployment :*\n ${{ secrets.Deployment}}\n<${{ secrets.Deployment}}|Open Application>"
                     }
-                  ]
-                },
-                {
-                  "type": "section",
-                  "block_id": "section792",
-                  "fields": [
-                  {
-                    "type": "mrkdwn",
-                    "text": "*Open Application*"
-                  },
-                  {
-                    "type": "button",
-                    "text": {
-                    "type": "plain_text", 
-                    "text": "${{ secrets.Deployment}}"
-                    },
-                    "value": "click_me",
-                    "url": "${{ secrets.Deployment}}"
-                  }
                   ]
                 }
               ]
